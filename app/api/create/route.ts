@@ -45,11 +45,11 @@ export async function POST(request: Request) {
 
   if (body.kind === "novel") {
     const prompt = `请把下面的梦境改编成一篇完整、有文学性的中文短篇小说。\n要求：\n1. 约1200至1800字，有开端、发展、转折和结尾；\n2. 风格：${body.tone || "奇幻心理"}；\n3. 保留梦中的核心人物、场景与情绪，但允许合理补全；\n4. 不要进行心理诊断，不要解释梦；\n5. 标题使用《${body.title || "梦境小说"}》；\n6. 直接输出小说正文，不输出创作说明。\n\n原始梦境：${body.dream}`;
-    const { response, data } = await dashscope("/compatible-mode/v1/chat/completions", { method: "POST", body: JSON.stringify({ model: "qwen-plus-us", messages: [{ role: "system", content: "你是专业中文小说家，擅长把梦境改编成完整短篇小说。" }, { role: "user", content: prompt }], temperature: 0.85 }) });
+    const { response, data } = await dashscope("/compatible-mode/v1/chat/completions", { method: "POST", body: JSON.stringify({ model: "qwen-plus", messages: [{ role: "system", content: "你是专业中文小说家，擅长把梦境改编成完整短篇小说。" }, { role: "user", content: prompt }], temperature: 0.85 }) });
     if (!response?.ok) return Response.json({ error: errorMessage(data) }, { status: response?.status || 502 });
     const text = (data as { choices?: { message?: { content?: string } }[] }).choices?.[0]?.message?.content;
     if (!text) return Response.json({ error: "模型没有返回小说正文" }, { status: 502 });
-    return Response.json({ provider: "dashscope", model: "qwen-plus-us", text });
+    return Response.json({ provider: "dashscope", model: "qwen-plus", text });
   }
 
   if (body.kind === "image") {
@@ -82,3 +82,4 @@ export async function GET(request: Request) {
   const url = findMediaUrl(data, "video");
   return Response.json({ taskId, status, url, error: output.message ?? null });
 }
+
