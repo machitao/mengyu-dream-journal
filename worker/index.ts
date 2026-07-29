@@ -2,6 +2,9 @@
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
+interface Fetcher { fetch(request: Request): Promise<Response>; }
+interface D1Database { prepare(query: string): unknown; }
+
 interface Env {
   ASSETS: Fetcher;
   DB: D1Database;
@@ -45,3 +48,4 @@ const worker = {
 };
 
 export default worker;
+

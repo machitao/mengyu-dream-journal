@@ -1,6 +1,5 @@
 import vinext from "vinext";
 import { defineConfig } from "vite";
-import { resolve } from "node:path";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 
@@ -41,37 +40,20 @@ export default defineConfig(async () => {
   process.env.WRANGLER_LOG_PATH ??= ".wrangler/logs";
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
-  const uiPreviewOnly = process.env.UI_PREVIEW === "1";
   // Wrangler snapshots its log path while the Cloudflare plugin is imported.
-  const cloudflare = uiPreviewOnly
-    ? null
-    : (await import("@cloudflare/vite-plugin")).cloudflare;
+  const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
-    resolve: uiPreviewOnly
-      ? {
-          alias: {
-            "cloudflare:workers": resolve(
-              process.cwd(),
-              "build/cloudflare-preview.ts",
-            ),
-          },
-        }
-      : undefined,
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
     plugins: [
       vinext(),
       sites(),
-      ...(cloudflare
-        ? [
-            cloudflare({
-              viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
-              config: localBindingConfig,
-            }),
-          ]
-        : []),
+      cloudflare({
+        viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
+        config: localBindingConfig,
+      }),
     ],
   };
 });
