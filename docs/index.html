@@ -1,108 +1,33 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="梦屿：私人梦境记录、双轨解读、长期洞察与创作工作室。"
-    />
-    <meta name="theme-color" content="#f5efe4" />
-    <title>梦屿 · 私人梦境档案</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        overflow: hidden;
-        background: #f5efe4;
-        color: #27231f;
-        font-family:
-          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-          "Segoe UI", "Microsoft YaHei", sans-serif;
-      }
-
-      .loading {
-        position: fixed;
-        inset: 0;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at 50% 28%, #fff9ee 0, transparent 34rem),
-          #f5efe4;
-        z-index: 0;
-      }
-
-      .loading-card {
-        text-align: center;
-      }
-
-      .loading-card strong {
-        display: block;
-        margin-bottom: 0.75rem;
-        font-family: Georgia, "Songti SC", serif;
-        font-size: clamp(2rem, 8vw, 4rem);
-        font-weight: 500;
-        letter-spacing: 0.08em;
-      }
-
-      .loading-card span {
-        color: #776e64;
-        font-size: 0.95rem;
-      }
-
-      iframe {
-        position: relative;
-        z-index: 1;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border: 0;
-        background: #f5efe4;
-      }
-
-      .fallback {
-        position: fixed;
-        right: 1rem;
-        bottom: 1rem;
-        z-index: 2;
-        border: 1px solid rgb(58 49 39 / 14%);
-        border-radius: 999px;
-        padding: 0.65rem 0.9rem;
-        background: rgb(255 252 246 / 88%);
-        color: #554c43;
-        font-size: 0.78rem;
-        text-decoration: none;
-        box-shadow: 0 8px 24px rgb(76 61 43 / 10%);
-        backdrop-filter: blur(12px);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="loading" aria-hidden="true">
-      <div class="loading-card">
-        <strong>梦屿</strong>
-        <span>正在进入你的私人梦境档案……</span>
-      </div>
-    </div>
-    <iframe
-      title="梦屿 · 私人梦境档案"
-      src="https://mengyu-dream-journal.chitaoma.chatgpt.site/"
-      allow="microphone; clipboard-write"
-      referrerpolicy="strict-origin-when-cross-origin"
-    ></iframe>
-    <a
-      class="fallback"
-      href="https://mengyu-dream-journal.chitaoma.chatgpt.site/"
-      target="_blank"
-      rel="noreferrer"
-    >
-      无法显示？打开原网站
-    </a>
-  </body>
-</html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f1e8"><meta name="description" content="梦屿：私人梦境记录与洞察。">
+<title>梦屿 · 私人梦境档案</title>
+<style>
+:root{--ink:#29251f;--muted:#786f65;--green:#285b49;--gold:#b18649;--line:rgba(69,57,42,.14);--paper:rgba(255,255,255,.7)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;background:radial-gradient(circle at 80% 0,rgba(235,216,178,.6),transparent 28rem),linear-gradient(#faf6ee,#f2ece1)}button,textarea,input{font:inherit}.top{height:70px;padding:0 max(20px,calc((100vw - 1140px)/2));display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5;background:rgba(249,245,237,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.brand{border:0;background:none;display:flex;gap:8px;align-items:center;font:600 22px Georgia,"Songti SC",serif}.brand i{font-style:normal;color:var(--gold);font-size:30px}.privacy{color:var(--muted);font-size:13px;padding:7px 11px;border:1px solid var(--line);border-radius:99px}.hero,.content{max-width:1140px;margin:auto;padding:72px 22px}.hero{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}.eyebrow{color:var(--green);font-size:12px;font-weight:700;letter-spacing:.16em}.copy h1{font:500 clamp(50px,7vw,82px)/1.03 Georgia,"Songti SC",serif;letter-spacing:-.045em;margin:16px 0}.copy h1 em{font-style:normal;color:var(--green)}.copy p{font-size:17px;line-height:1.9;color:var(--muted);max-width:460px}.card,.dream,.panel{background:var(--paper);border:1px solid var(--line);box-shadow:0 22px 65px rgba(65,49,29,.11)}.card{padding:26px;border-radius:25px}.date{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-bottom:14px}textarea{width:100%;min-height:190px;border:0;border-radius:16px;padding:18px;background:#f7f2e9;outline:none;resize:vertical;line-height:1.8;color:var(--ink)}textarea:focus{box-shadow:0 0 0 2px rgba(40,91,73,.18)}.label{font-size:13px;color:var(--muted);margin:16px 0 9px}.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid var(--line);background:#fff9;border-radius:99px;padding:7px 11px;color:var(--muted);cursor:pointer}.chip.on{background:var(--green);border-color:var(--green);color:white}.primary{width:100%;margin-top:18px;padding:14px;border:0;border-radius:14px;background:var(--green);color:white;font-weight:700;cursor:pointer}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:20px}.section-head h2{margin:0;font:500 31px Georgia,"Songti SC",serif}.section-head p{margin:6px 0 0;color:var(--muted)}.ghost{border:0;background:none;color:var(--green);cursor:pointer}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.dream{border-radius:19px;padding:21px;text-align:left;cursor:pointer}.dream time{font-size:12px;color:var(--gold)}.dream h3{font:500 22px Georgia,"Songti SC",serif;margin:13px 0 8px}.dream p{color:var(--muted);line-height:1.7;min-height:47px}.tags{display:flex;flex-wrap:wrap;gap:6px}.tags span{font-size:12px;color:var(--muted);padding:6px 9px;border-radius:99px;background:#f4eee3}.empty{grid-column:1/-1;text-align:center;padding:42px;border:1px dashed var(--line);border-radius:18px;color:var(--muted)}.modal{display:none;position:fixed;inset:0;z-index:20;background:rgba(31,27,23,.42);padding:20px;overflow:auto}.modal.open{display:grid;place-items:center}.panel{width:min(760px,100%);border-radius:24px;padding:30px;position:relative}.panel h2{font:500 38px Georgia,"Songti SC",serif;margin:10px 0}.panel p,.panel li{line-height:1.8;color:#5e564e}.close{position:absolute;right:18px;top:16px;border:0;background:#eee8dd;width:36px;height:36px;border-radius:50%;cursor:pointer}.analysis{margin-top:20px;padding:18px;border-radius:15px;background:#e9f0eb}.analysis h3{margin-top:0;color:var(--green)}.symbol{border-left:3px solid var(--gold);padding-left:13px;margin:13px 0}.symbol small{display:block;color:var(--muted);margin-top:4px}.toast{position:fixed;z-index:30;left:50%;top:82px;transform:translate(-50%,-12px);opacity:0;background:#292621;color:white;padding:10px 15px;border-radius:99px;font-size:13px;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}footer{text-align:center;color:var(--muted);font-size:12px;padding:10px 20px 38px}
+@media(max-width:780px){.top{height:62px;padding:0 16px}.privacy{font-size:11px}.hero{grid-template-columns:1fr;padding:48px 17px 26px;gap:27px}.copy h1{font-size:51px}.card{padding:19px}.content{padding:28px 17px 70px}.grid{grid-template-columns:1fr}.section-head{align-items:start}.panel{padding:24px}.panel h2{font-size:32px}}
+</style>
+</head>
+<body>
+<div id="toast" class="toast"></div>
+<header class="top"><div class="brand"><i>☾</i><span>梦屿</span></div><span class="privacy">◷ 仅保存在你的设备</span></header>
+<main>
+<section class="hero"><div class="copy"><div class="eyebrow">醒来后的第一件事</div><h1>梦还在吗？<br><em>把它留住。</em></h1><p>不急着解释，也不必完整。记下一幅画面、一种感受，或者梦里没有说完的那句话。</p></div>
+<div class="card"><div class="date"><span id="today"></span><span>草稿自动保存</span></div><textarea id="input" placeholder="我在一个很长的车站里……"></textarea><div class="label">醒来时最明显的感受</div><div class="chips" id="chips"></div><button class="primary" id="save">保存并分析梦境 →</button></div></section>
+<section class="content"><div class="section-head"><div><h2>最近的梦</h2><p>每个梦都有自己的名字和线索</p></div><button class="ghost" id="clear">清空记录</button></div><div id="dreams" class="grid"></div></section>
+</main>
+<div class="modal" id="modal"><article class="panel"><button class="close" id="close">×</button><div class="eyebrow">私人梦境档案</div><h2 id="mTitle"></h2><div class="tags" id="mTags"></div><p id="mText"></p><div class="analysis"><h3 id="mTheme"></h3><p id="mOverview"></p><div id="mSymbols"></div><h3>可以继续问自己的问题</h3><ul id="mQuestions"></ul></div></article></div>
+<footer>GitHub Pages 静态版 · 梦境内容仅保存在当前浏览器</footer>
+<script>
+(()=>{const KEY='mengyu-pages-dreams-v1',DRAFT='mengyu-pages-draft-v1',feelings=['好奇','平静','焦虑','怀念','喜悦','恐惧'];let feeling='好奇';const rules=[['狗','狗 / 动物','关系中的亲近、忠诚、追逐或本能反应'],['猫','猫 / 动物','独立、敏感、警觉或亲密距离'],['水','水','情绪的流动、未知感或需要被容纳的感受'],['海','海','更辽阔、难以穷尽的情绪与可能性'],['桥','桥','过渡、连接与选择'],['车站','车站','等待、启程、错过或人生节奏转换'],['火车','列车','被既定轨道带动的进程与时间压力'],['房','房屋','内在空间、家庭经验、隐私与安全感'],['学校','学校','评价、学习、规则与过去形成的标准'],['考试','考试','被评估、准备不足或对结果的在意'],['高考','高考','高压评价、关键选择与人生分岔'],['追','追逐','尚未正面处理的压力、目标或关系张力'],['飞','飞行','自由、脱离限制或对失控的复杂感受'],['坠','坠落','失去支撑、控制感下降或对失败的担心'],['蛇','蛇','变化、本能、危险感或难以命名的吸引力'],['月','月亮','夜间情绪、直觉、距离感与温柔的照见'],['门','门','机会、边界与进入新阶段'],['迷路','迷路','方向感不足、选择过多或暂时缺少答案']];
+const $=s=>document.querySelector(s),esc=s=>(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'})[c]);let dreams=[];try{dreams=JSON.parse(localStorage.getItem(KEY)||'[]')}catch{}if(!dreams.length)dreams=[makeDream('梦见两只小狗一直追着我跑，后来我们一起走进了考场参加高考。','好奇',Date.now()-86400000)];
+$('#today').textContent=new Intl.DateTimeFormat('zh-CN',{month:'long',day:'numeric',weekday:'long'}).format(new Date());$('#input').value=localStorage.getItem(DRAFT)||'';$('#input').addEventListener('input',e=>localStorage.setItem(DRAFT,e.target.value));$('#chips').innerHTML=feelings.map(x=>`<button class="chip ${x===feeling?'on':''}" data-f="${x}">${x}</button>`).join('');$('#chips').onclick=e=>{if(!e.target.dataset.f)return;feeling=e.target.dataset.f;[...document.querySelectorAll('.chip')].forEach(x=>x.classList.toggle('on',x.dataset.f===feeling))};
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2400)}function phrases(t){return t.replace(/\s+/g,' ').trim().split(/[。！？!?；;\n]/).filter(Boolean)}function tags(t){const a=rules.filter(r=>t.includes(r[0])).map(r=>r[1]);for(const w of t.match(/[\u4e00-\u9fff]{2,5}/g)||[]){if(!a.some(x=>x.includes(w))&&!['梦见','然后','后来','感觉','自己'].includes(w))a.push(w);if(a.length>=4)break}return [...new Set(a)].slice(0,4)}
+function makeDream(text,emo,time=Date.now()){text=text.replace(/\s+/g,' ').trim();const ts=tags(text),symbols=rules.filter(r=>text.includes(r[0])).slice(0,4).map(r=>({name:r[1],evidence:phrases(text).find(x=>x.includes(r[0]))||`梦中出现了“${r[1]}”`,idea:r[2]}));if(!symbols.length)symbols.push({name:'核心场景',evidence:phrases(text)[0]||text,idea:'它可能是近期经验的重新组合，也可能承载只有你自己知道的个人联想。'});const pressure=/考试|高考|迟到|追|工作|领导/.test(text),transition=/桥|门|车站|火车|搬家|毕业|离开|道路/.test(text),relation=/朋友|家人|妈妈|爸爸|孩子|恋人|同事|狗|猫/.test(text),theme=[pressure&&'压力与评价',transition&&'过渡与选择',relation&&'关系与边界'].filter(Boolean).join('、')||`${symbols[0].name}带来的个人联想`,title=(ts.length>1?`${ts[0]}与${ts[1]}`:ts[0]?`${ts[0]}之梦`:phrases(text)[0]||'未命名的梦').slice(0,18);return{id:crypto.randomUUID?crypto.randomUUID():String(time),title,text,emotion:emo,time,date:new Intl.DateTimeFormat('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}).format(new Date(time)),tags:ts.length?ts:[emo,'梦境'],theme,overview:`这个梦围绕“${theme}”展开。你记录的主要感受是“${emo}”。这些意象可能是在整理近期经验，而不是给出固定答案。`,symbols,questions:[`现实中，什么最像梦里的“${symbols[0].name}”？`,pressure?'最近哪件事让你觉得正在被追赶、比较或评判？':'醒来后身体最明显的感觉在哪里？',`如果梦可以继续，带着“${emo}”的你最想改变哪个情节？`]}}
+function render(){const box=$('#dreams');box.innerHTML=dreams.length?dreams.map(d=>`<button class="dream" data-id="${d.id}"><time>${esc(d.date)}</time><h3>${esc(d.title)}</h3><p>${esc(phrases(d.text).slice(0,2).join('，').slice(0,68))}</p><div class="tags">${d.tags.slice(0,3).map(t=>`<span>${esc(t)}</span>`).join('')}</div></button>`).join(''):'<div class="empty">第一段梦正在等你留下。</div>';box.onclick=e=>{const b=e.target.closest('[data-id]');if(b)open(dreams.find(d=>d.id===b.dataset.id))}}
+function open(d){$('#mTitle').textContent=d.title;$('#mText').textContent=d.text;$('#mTheme').textContent=d.theme;$('#mOverview').textContent=d.overview;$('#mTags').innerHTML=d.tags.map(t=>`<span>${esc(t)}</span>`).join('');$('#mSymbols').innerHTML=d.symbols.map(s=>`<div class="symbol"><b>${esc(s.name)}</b><small>${esc(s.evidence)}</small><p>${esc(s.idea)}</p></div>`).join('');$('#mQuestions').innerHTML=d.questions.map(q=>`<li>${esc(q)}</li>`).join('');$('#modal').classList.add('open')}
+$('#save').onclick=()=>{const text=$('#input').value.trim();if(!text)return toast('先写下你记得的梦');dreams.unshift(makeDream(text,feeling));localStorage.setItem(KEY,JSON.stringify(dreams));localStorage.removeItem(DRAFT);$('#input').value='';render();toast('梦境已保存并生成专属分析')};$('#clear').onclick=()=>{if(confirm('确定清空这台设备上的全部梦境吗？')){dreams=[];localStorage.setItem(KEY,'[]');render();toast('本机梦境已清空')}};$('#close').onclick=()=>$('#modal').classList.remove('open');$('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').classList.remove('open')};render()})();
+</script>
+</body></html>
